@@ -17,6 +17,11 @@ API_KEY = 'YOUR_API_KEY_HERE'
   node server.js
 ```
 
+## Features
+
+1. Get a random monkey Youtube video 
+2. Get a new video you haven't seen before each time you click the 'Next Monkey!' video
+
 ## Usage
 
 ## Contributing

@@ -49,12 +49,15 @@ async function getRandomMonkeyVideo(searchQuery, maxResults, apiKey) {
 }
 
 async function fetchMonkeyVideo() {
-  apiKey = await getApiKey();
+  try {
+    apiKey = await getApiKey();
+    const searchQuery = 'monkey';
+    const maxResults = 10; // number of results to pull
 
-  const searchQuery = 'monkey';
-  const maxResults = 10; // number of results to pull
-
-  getRandomMonkeyVideo(searchQuery, maxResults, apiKey);
+    getRandomMonkeyVideo(searchQuery, maxResults, apiKey);
+  } catch {
+    // 
+  }
 
 }
 

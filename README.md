@@ -1,5 +1,7 @@
 # MonkeyVids
 
+<img src="assets/monkey.png" height=250 alt="monkey illustration">
+
 Get a random monkey video
 
 ## Installation

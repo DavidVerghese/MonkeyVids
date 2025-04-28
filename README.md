@@ -11,6 +11,11 @@ Get a random monkey video
 ```
 API_KEY = 'YOUR_API_KEY_HERE'
 ```
+3. In your terminal, navigate into this repo and run 
+```shell
+  npm i
+  node server.js
+```
 
 ## Usage
 
@@ -24,3 +29,7 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## References
+
+https://www.npmjs.com/package/dotenv

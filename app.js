@@ -13,52 +13,40 @@ function appendVideo(videoId) {
   container.appendChild(iframe);
 }
 
-async function getApiKey() {
-  const response = await fetch('http://localhost:3000/apikey');
-  const data = await response.json();
-  return data.apiKey;
-}
+async function getVids(searchQuery, maxResults) {
 
-async function getRandomMonkeyVideo(searchQuery, maxResults, apiKey) {
+  const backupVideoList = [
+    'b0NHrFNZWh0',
+    'vOY6x4NksIk',
+    'kUG9JdigH54'
+  ]
+
   try {
-    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=${maxResults}&q=${encodeURIComponent(searchQuery)}&type=video&key=${apiKey}`);
+    const response = await fetch(`http://localhost:3000/videos?searchQuery=${encodeURIComponent(searchQuery)}&maxResults=${maxResults}`);
     const data = await response.json();
-    
-    const backupVideoList = [
-      'b0NHrFNZWh0',
-      'vOY6x4NksIk',
-      'kUG9JdigH54'
-    ]
 
     if (response.ok) {
       if (data.items && data.items.length > 0) {
         const randomIndex = getRandomIndex(data.items.length);
         const videoId = data.items[randomIndex].id.videoId;
         appendVideo(videoId);
-      } else {
-        console.error('No videos found.');
+        return;
       }
-    } else {
-      const randomIndex = getRandomIndex(backupVideoList.length)
-      const videoId = backupVideoList[randomIndex];
-      appendVideo(videoId)
     }
+
+    const randomIndex = getRandomIndex(backupVideoList.length)
+    const videoId = backupVideoList[randomIndex];
+    appendVideo(videoId)
+
   } catch (error) {
-    console.error('Error fetching video:', error);
+    console.error('Error fetching videos:', error);
   }
 }
 
 async function fetchMonkeyVideo() {
-  try {
-    apiKey = await getApiKey();
-    const searchQuery = 'monkey';
-    const maxResults = 10; // number of results to pull
-
-    getRandomMonkeyVideo(searchQuery, maxResults, apiKey);
-  } catch {
-    // 
-  }
-
+  const searchQuery = 'monkey';
+  const maxResults = 10; // number of results to pull
+  getVids(searchQuery, maxResults);
 }
 
 fetchMonkeyVideo();

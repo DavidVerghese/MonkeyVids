@@ -11,14 +11,14 @@ app.use(cors());
 
 app.get('/videos', async (req, res) => {
   apiKey = process.env.API_KEY;
-  const { searchQuery, maxResults } = req.query;
+  const { searchQuery, maxResults, channelId } = req.query;
 
-  if (!searchQuery || !maxResults) {
+  if (!searchQuery || !maxResults || !channelId ) {
     return res.status(400).json({ error: 'Missing required query parameters: searchQuery, maxResults' });
   }
 
   try {
-    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=${maxResults}&q=${encodeURIComponent(searchQuery)}&type=video&key=${apiKey}`);
+    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=${maxResults}&q=${encodeURIComponent(searchQuery)}&safeSearch=strict&channelId=${channelId}&type=video&key=${apiKey}`);
     const data = await response.json();
 
     if (response.ok) {

@@ -13,7 +13,7 @@ function appendVideo(videoId) {
   container.appendChild(iframe);
 }
 
-async function getVids(searchQuery, maxResults) {
+async function getVids(searchQuery, maxResults, channelId) {
 
   const backupVideoList = [
     'b0NHrFNZWh0',
@@ -22,7 +22,7 @@ async function getVids(searchQuery, maxResults) {
   ]
 
   try {
-    const response = await fetch(`http://localhost:3000/videos?searchQuery=${encodeURIComponent(searchQuery)}&maxResults=${maxResults}`);
+    const response = await fetch(`http://localhost:3000/videos?searchQuery=${encodeURIComponent(searchQuery)}&maxResults=${maxResults}&chanelId=${channelId}`);
     const data = await response.json();
 
     if (response.ok) {
@@ -46,7 +46,8 @@ async function getVids(searchQuery, maxResults) {
 async function fetchMonkeyVideo() {
   const searchQuery = 'monkey';
   const maxResults = 10; // number of results to pull
-  getVids(searchQuery, maxResults);
+  const channelId = 'UCpVm7bg6pXKo1Pr6k5kxG9A' // nationalGeographic
+  getVids(searchQuery, maxResults, channelId);
 }
 
 fetchMonkeyVideo();

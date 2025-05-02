@@ -16,8 +16,10 @@ API_KEY = 'YOUR_API_KEY_HERE'
 3. In your terminal, navigate into this repo and run 
 ```shell
   npm i
-  node server.js
+  nodemon ./server.js localhost 3000 
 ```
+
+4. Go to 'http://localhost:3000/'
 
 ## Features
 

@@ -23,8 +23,14 @@ API_KEY = 'YOUR_API_KEY_HERE'
 
 ## Features
 
-1. Get a random monkey Youtube video 
+### MVP 
+
+1. Get a random monkey Youtube video using the Youtube API (or from a backup list of videos if you have exceeded the daily Youtube API limit)
 2. Get a new video you haven't seen before each time you click the 'Next Monkey!' video
+
+### Post-MVP 
+
+1. Traverse YouTube API pagination using 'nextPageToken' parameter to fetch additional results. 
 
 ## Usage
 

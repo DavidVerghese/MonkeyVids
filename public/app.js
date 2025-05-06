@@ -30,7 +30,7 @@ const backupVideoList = [
 async function getVids(searchQuery, maxResults, channelId, pageToken = '') {
   try {
     const pageTokenParameter = pageToken ? `&pageToken=${pageToken}` : ''
-    const response = await fetch(`http://localhost:3000/videos?searchQuery=${encodeURIComponent(searchQuery)}&maxResults=${maxResults}&channelId=${channelId}${pageTokenParameter}`);
+    const response = await fetch(`/videos?searchQuery=${encodeURIComponent(searchQuery)}&maxResults=${maxResults}&channelId=${channelId}${pageTokenParameter}`);
     const data = await response.json();
 
     if (response.ok) {

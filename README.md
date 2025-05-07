@@ -1,6 +1,6 @@
 # MonkeyVids
 
-<img src="assets/monkey.png" height=250 alt="monkey illustration">
+<img src="assets/monkey-logo.png" height=250 alt="monkey illustration">
 
 Get a random monkey video
 
@@ -32,6 +32,14 @@ This app is aimed at young kids who enjoys short, funny videos that also teach t
 I would also like to make this app dark-mode friendly.
 
 ### Wireframes
+
+<img src="assets/mobile.png" height=250 alt="Mobile wireframe">
+
+<img src="assets/mobile-animation.png" height=250 alt="Mobile wireframe">
+
+<img src="assets/desktop.png" height=250 alt="Desktop wireframe">
+
+<img src="assets/desktop-animation.png" height=250 alt="Desketop wireframe">
 
 ## Features
 

@@ -23,6 +23,16 @@ API_KEY = 'YOUR_API_KEY_HERE'
 
 4. Go to 'http://localhost:3000/'
 
+## UX/UI
+
+### Target Audience
+
+This app is aimed at young kids who enjoys short, funny videos that also teach them something new, especially about animals or science. The UI should be simple and easy to navigate. I will use vibrant colors, and fun animations to keep users engaged. 
+
+I would also like to make this app dark-mode friendly.
+
+### Wireframes
+
 ## Features
 
 ### MVP 

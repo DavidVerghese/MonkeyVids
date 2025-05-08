@@ -1,6 +1,6 @@
 # MonkeyVids
 
-<img src="assets/monkey-logo.png" height=250 alt="monkey illustration">
+<img src="assets/monkey-1.png" height=250 alt="monkey illustration">
 
 Get a random monkey video
 

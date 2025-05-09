@@ -39,7 +39,7 @@ I would also like to make this app dark-mode friendly.
 
 <img src="assets/desktop.png" height=250 alt="Desktop wireframe">
 
-<img src="assets/desktop-animation.png" height=250 alt="Desketop wireframe">
+<img src="assets/desktop-animation.jpg" height=250 alt="Desketop wireframe">
 
 ## Features
 

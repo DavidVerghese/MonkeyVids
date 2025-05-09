@@ -51,6 +51,7 @@ I would also like to make this app dark-mode friendly.
 ### Post-MVP 
 
 1. Traverse YouTube API pagination using 'nextPageToken' parameter to fetch additional results. 
+2. Display a grid of videos, instead of using the 'next' button
 
 ## Usage
 

@@ -32,8 +32,9 @@ async function getVids(searchQuery, maxResults, channelId, pageToken = '') {
     const pageTokenParameter = pageToken ? `&pageToken=${pageToken}` : ''
     const response = await fetch(`/videos?searchQuery=${encodeURIComponent(searchQuery)}&maxResults=${maxResults}&channelId=${channelId}${pageTokenParameter}`);
     const data = await response.json();
+    const devMode = true; // disable API requests when testing
 
-    if (response.ok) {
+    if (response.ok && !devMode) {
       if (data.items && data.items.length > 0) {
         return data.items.map((elem)=>elem.id.videoId);
       }
@@ -55,12 +56,35 @@ async function displaySelectedVideo(index) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+function toggleVideoVisibility(showVideo) {
+  const videoContainer = document.getElementById('video-container');
+  const bananaContainer = document.getElementById('banana-container');
+
+  if (showVideo) {
+    videoContainer.classList.remove('hidden');
+    bananaContainer.classList.add('hidden');
+  } else {
+    videoContainer.classList.add('hidden');
+    bananaContainer.classList.remove('hidden');
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    toggleVideoVisibility(true)
+  }, 2000);
+
   displaySelectedVideo(0);
 });
 
 const nextButton = document.getElementById('next-button');
 nextButton.addEventListener('click', () => {
+
+  toggleVideoVisibility(false);
+  setTimeout(() => {
+    toggleVideoVisibility(true);
+  }, 1000);
+
   videoIndex < 10 ? videoIndex++ : videoIndex = 0;
   displaySelectedVideo(videoIndex);
 })

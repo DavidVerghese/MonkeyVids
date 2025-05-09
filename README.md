@@ -31,6 +31,10 @@ This app is aimed at young kids who enjoys short, funny videos that also teach t
 
 I would also like to make this app dark-mode friendly.
 
+### Process
+
+For this application, I drew all the icons (the monkey portraits, monkey paws, etc) in Adobe Illustrator.
+
 ### Wireframes
 
 <img src="assets/mobile.png" height=250 alt="Mobile wireframe">

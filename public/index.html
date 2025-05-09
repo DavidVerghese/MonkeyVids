@@ -5,17 +5,29 @@
     <title>Random Monkey Video</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&family=Walter+Turncoat&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <header>
-      <img src="/assets/monkey-1.png" alt = "monkey" />
-      <img src="/assets/monkey-2.png" alt = "monkey" />
-      <img src="/assets/monkey-3.png" alt = "monkey" />
-      <img src="/assets/monkey-4.png" alt = "monkey" />
+      <div id="monkey-icons">
+        <img src="/assets/monkey-1.png" alt = "monkey" />
+        <img src="/assets/monkey-2.png" alt = "monkey" />
+        <img src="/assets/monkey-3.png" alt = "monkey" />
+        <img src="/assets/monkey-4.png" alt = "monkey" />
+      </div>
+      <h1>Random Monkey Video</h1>
+      <p>Swing into the wild world of monkeys!</p>
     </header>
-    <h1>Random Monkey Video</h1>
     <div id="video-container">
       <!-- Video will be inserted here -->
+    </div>
+    <div class="banana-container">
+      <h2>Loading...</h2>
+      <img src="/assets/banana.png" alt="Banana" class="banana" id="banana-one" />
+      <img src="/assets/banana.png" alt="Banana" class="banana" id="banana-two"/>
+      <img src="/assets/banana.png" alt="Banana" class="banana" id="banana-three" />
     </div>
     <button id="next-button">Next Monkey!</button>
   </body>

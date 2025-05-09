@@ -33,7 +33,7 @@ I would also like to make this app dark-mode friendly.
 
 ### Process
 
-For this application, I drew all the icons (the monkey portraits, monkey paws, etc) in Adobe Illustrator.
+For this application, I drew all the icons (the monkey portraits, monkey paws, etc) in Adobe Illustrator. I created the wireframes in Figma.
 
 ### Wireframes
 

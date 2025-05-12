@@ -13,8 +13,12 @@ button {
   cursor: pointer;
   filter: drop-shadow(5px 5px 5px #565656);
   border-radius: 10px;
+  background-color: #048243; 
+  color: white;
 }
-
+button:hover {
+  background-color: #04a253; 
+}
 header {
   width: 100%;
   text-align: center;

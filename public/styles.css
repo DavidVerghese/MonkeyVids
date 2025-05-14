@@ -35,7 +35,7 @@ header #monkey-icons {
 }
 
 header img {
-  height: 150px;
+  height: 100px;
   filter: drop-shadow(5px 5px 5px #565656);
 }
 
@@ -98,3 +98,26 @@ iframe {
 /* p, h2, button {
   font-family: "Shadows Into Light Two", cursive;
 } */
+
+@media (min-width: 601px) { 
+  .mobile-title {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) { 
+  header .title {
+    display: none;
+  }
+  header img {
+    height: 80px;
+  }
+  iframe {
+    width: 336px;
+    height: 189px;
+  }
+  #banana-container {
+    width: 336px;
+    height: 193px;
+  }
+}

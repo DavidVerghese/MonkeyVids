@@ -37,17 +37,23 @@ For this application, I drew all the icons (the monkey portraits, monkey paws, e
 
 ### Wireframes
 
+#### Mobile
+
 <img src="assets/mobile.png" height=250 alt="Mobile wireframe">
 
 <img src="assets/mobile-animation.png" height=250 alt="Mobile wireframe with falling banana animation">
+
+#### Tablet
 
 <img src="assets/tablet.png" height=250 alt="Tablet wireframe">
 
 <img src="assets/tablet-animation.png" height=250 alt="Tablet wireframe with falling banana animation">
 
+#### Desktop
+
 <img src="assets/desktop.png" height=250 alt="Desktop wireframe">
 
-<img src="assets/desktop-animation.jpg" height=250 alt="Desketop wireframe with falling banana animation">
+<img src="assets/desktop-animation.png" height=250 alt="Desketop wireframe with falling banana animation">
 
 ## Features
 

@@ -1,5 +1,3 @@
-let apiKey;
-
 let videoIndex = 0;
 
 function appendVideo(videoId) {
@@ -32,9 +30,8 @@ async function getVids(searchQuery, maxResults, channelId, pageToken = '') {
     const pageTokenParameter = pageToken ? `&pageToken=${pageToken}` : ''
     const response = await fetch(`/videos?searchQuery=${encodeURIComponent(searchQuery)}&maxResults=${maxResults}&channelId=${channelId}${pageTokenParameter}`);
     const data = await response.json();
-    const devMode = true; // disable API requests when testing
 
-    if (response.ok && !devMode) {
+    if (response.ok) {
       if (data.items && data.items.length > 0) {
         return data.items.map((elem)=>elem.id.videoId);
       }
